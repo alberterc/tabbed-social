@@ -32,7 +32,7 @@
                 <span style="font-size: 20px; color: #676767;">Multiple social media in one place</span>
             </div>
             <div id="links">
-                <RouterLinkButton name="Get started!" />
+                <RouterLinkButton name="Get started!" target="dashboard"/>
             </div>
         </div>
         <div id="main-description">

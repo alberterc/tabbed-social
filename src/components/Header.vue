@@ -8,13 +8,13 @@
 
 <template>
     <div>
-        <header>
-            <img @click="scrollToTarget('main-title')" src="../assets/tabbed-social-logo.svg" width="60"/>
-            <nav>
+        <header v-bind:style="$route.name === 'landing-page' ? 'justify-content: space-between' : 'justify-content: center'">
+            <img @click="$route.name ==='landing-page' ? scrollToTarget('main-title') : $router.push({ name: 'landing-page' })" src="../assets/tabbed-social-logo.svg" width="60"/>
+            <nav v-show="$route.name === 'landing-page'">
                 <button @click="scrollToTarget('what-desc')">What?</button>
                 <button @click="scrollToTarget('features-desc')">Features</button>
                 <button @click="scrollToTarget('how-desc')">How it works?</button>
-                <RouterLinkButton name="Get started!" />
+                <RouterLinkButton name="Get started!" target="dashboard"/>
             </nav>
         </header>
     </div>
@@ -25,7 +25,6 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
         padding: 1.5rem;
         padding-left: 2rem;
         padding-right: 2rem;
