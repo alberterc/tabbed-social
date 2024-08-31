@@ -2,12 +2,13 @@
     import { RouterLink } from 'vue-router';
 
     defineProps({
-        name: String
+        name: String,
+        target: String
     })
 </script>
 
 <template>
-    <RouterLink to="#">{{ name }}</RouterLink>
+    <RouterLink :to="{ name: target }">{{ name }}</RouterLink>
 </template>
 
 <style scoped>
