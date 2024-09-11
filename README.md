@@ -1,5 +1,5 @@
 # Tabbed Social
-Frontend design of a website to open multiple social media in one browser tab.
+Frontend design of a concept website to open multiple social media in one browser tab.
 
 ## Tech Stack
 - Node.js v22.3.0
